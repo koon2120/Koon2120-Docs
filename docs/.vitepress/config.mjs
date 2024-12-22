@@ -32,36 +32,43 @@ export default defineConfig({
     nav: [
       { text: "หน้าหลัก", link: "/" },
       { text: "เกี่ยวกับ", link: "what-is" },
-      { text: "เนื้อหาทั้งหมด", link: "contents" },
+      { text: "เนื้อหาทั้งหมด", items: [{ text: "Python", link: "python" }] },
     ],
 
     sidebar: {
       "/": {
         text: "เริ่มต้น",
-        collapsed: true,
         base: "/",
         items: [
           { text: "Koon2120 Docs คืออะไร..?", link: "what-is" },
           { text: "วิธีการเรียนเบื้องต้น", link: "how-to-learn" },
-          { text: "เนื้อหาทั้งหมด", link: "contents" },
+          {
+            text: "เนื้อหาทั้งหมด",
+            items: [{ text: "Python", link: "python" }],
+          },
         ],
       },
       "/python/": {
         text: "Python",
-        collapsed: true,
         base: "/python/",
         items: [
           { text: "ทำความรู้จักกับ Python", link: "what-is" },
           { text: "วิธีติดตั้ง Python", link: "installation" },
-          { text:"เนื้อหา A",items:[
-            { text: "ทดสอบ 1", link: "test1" },
-            { text: "ทดสอบ 2", link: "test2" },
-            { text: "ทดสอบ 3", link: "test3" },
-          ]}
+          {
+            text: "เนื้อหา A",
+            collapsed: true,
+            items: [
+              { text: "ทดสอบ 1", link: "test1" },
+              { text: "ทดสอบ 2", link: "test2" },
+              { text: "ทดสอบ 3", link: "test3" },
+            ],
+          },
         ],
       },
     },
 
-    socialLinks: [{ icon: "github", link: "https://github.com/koon2120" }],
+    socialLinks: [
+      { icon: "github", link: "https://github.com/koon2120/Koon2120-Docs" },
+    ],
   },
 });
