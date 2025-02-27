@@ -32,7 +32,7 @@ export default defineConfig({
     nav: [
       { text: "หน้าหลัก", link: "/" },
       { text: "เกี่ยวกับ", link: "what-is" },
-      { text: "เนื้อหาทั้งหมด", items: [{ text: "Python", link: "python" }] },
+      { text: "เนื้อหาทั้งหมด", items: [{ text: "Vue.js", link: "vuejs" }] },
     ],
 
     sidebar: {
@@ -44,22 +44,40 @@ export default defineConfig({
           { text: "วิธีการเรียนเบื้องต้น", link: "how-to-learn" },
           {
             text: "เนื้อหาทั้งหมด",
-            items: [{ text: "Python", link: "python" }],
+            items: [{ text: "Vue.js", link: "vuejs" }],
+          },
+          {
+            text: "เกร็ดความรู้",
+            items: [
+              { text: "Front-end กับ Back-end ต่างกันยังไง..?", link: "funfact/frontend-and-backend" },
+            ],
           },
         ],
       },
-      "/python/": {
-        text: "Python",
-        base: "/python/",
+      "/vuejs/": {
+        text: "Vue.js",
+        base: "/vuejs/",
         items: [
-          { text: "ทำความรู้จักกับ Python", link: "what-is" },
-          { text: "วิธีติดตั้ง Python", link: "installation" },
+          { text: "ทำความรู้จักกับ Vue.js", link: "what-is" },
+          { text: "วิธีติดตั้ง Vue.js", link: "installation" },
           {
-            text: "เนื้อหา A",
-            collapsed: true,
+            text: "บทเรียนพื้นฐาน",
+            collapsed: false,
             items: [
               { text: "ทดสอบ 1", link: "test1" },
+            ],
+          },
+          {
+            text: "บทเรียนระดับกลาง",
+            collapsed: false,
+            items: [
               { text: "ทดสอบ 2", link: "test2" },
+            ],
+          },
+          {
+            text: "บทเรียนสูง",
+            collapsed: false,
+            items: [
               { text: "ทดสอบ 3", link: "test3" },
             ],
           },
